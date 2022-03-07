@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="coupon-card">
+        <img src="logo.jpg" class="logo" />
+        <h3>
+          Sign up and get Rs.50 for FREE!<br />
+          Download the Shopsy app by Flipkart and earn more as you shop 🤑
+        </h3>
+        <div class="coupon-row">
+            <span id="cpnCode">RIO420</span>
+            <span id="cpnBtn">COPY CODE!</span>
+        </div>
+        <p>Valid Till: 20May,2022</p>
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+      </div>
+    </div>
+    <script>
+        var cpnBtn= document.getElementById("cpnBtn");
+        var cpCode= document.getElementById("cpnCode");
+        
+        cpnBtn.onclick=function(){
+            navigator.clipboard.writeText(cpnBtn.innerHTML);
+            cpnBtn.innerHTML= "COPIED";
+            setTimeout(function(){
+                cpnBtn.innerHTML="COPY CODE";
+            },3000)
+        }
+    </script>
+  </body>
+</html>
